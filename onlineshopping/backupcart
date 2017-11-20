@@ -1,0 +1,114 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import bean.*;
+import Dao.*;
+
+public class CartController extends HttpServlet
+{
+public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException
+	{
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String item=request.getParameter("item");
+		String quantity=request.getParameter("qty");
+		String price=request.getParameter("price");
+		StringBuilder sb=new StringBuilder("");
+		/*sb.append(item);
+		sb.append("&");
+		sb.append(quantity);
+		sb.append("&");
+		sb.append(price);
+		sb.append("&");*/
+		String c_value="",cc_value="hey",check="";
+		String name=request.getParameter("name");
+		Cookie c=null;
+		int counter=0,qu,totprice,cal,sum=0,pr;
+		Cookie ci[]=request.getCookies();
+        //String spl[]=null;
+        //c_value=ci[0].getValue();
+		if(ci!=null)
+		{
+            check="before name";
+            for(int i=0;i<ci.length;i++)
+            {
+                if(ci[i].getName().equals(name))
+                {
+                    c=ci[i];
+                    c_value=c.getValue();
+                    if(c_value.length()==0)
+                    {
+                        
+                        sb.append(item);
+                        sb.append("&");
+                        sb.append(quantity);
+                        sb.append("&");
+                        qu=Integer.parseInt(quantity);
+                        pr=Integer.parseInt(price);
+						totprice=qu*pr;
+                        sb.append(String.valueOf(totprice));
+                        sb.append("&");
+                        out.println("in if");
+                    }
+                    else
+                    {
+                        
+                           String spl[]=c_value.split("&");
+                        int len=spl.length;
+                        out.println("in else");
+						for(i=0;i<spl.length;i++)
+						{
+                            //out.println(i);
+                            //out.println(spl[i]);
+                                /*check="name";
+							if(spl[i].contains(item))
+							{
+                                cc_value="hey hello";
+								int quant=Integer.parseInt(quantity);
+								if(quant > 0)
+								{
+									 qu=Integer.parseInt(spl[i+1]);
+									qu=qu+1;
+                                    pr=Integer.parseInt(price);
+									 totprice=qu*pr;
+									spl[i+2]=String.valueOf(totprice);
+									spl[i+1]=String.valueOf(qu);
+								}
+                                else
+								{
+                                    check="name1";
+									qu=Integer.parseInt(spl[i+1]);
+									qu=qu-1;
+                                    pr=Integer.parseInt(price);
+									totprice=qu*pr;
+									spl[i+2]=String.valueOf(totprice);
+									spl[i+1]=String.valueOf(qu);
+                                    out.println(spl[i]);
+                                    out.println(spl[i+1]);
+                                    out.println(spl[i+2]);
+								}								
+								counter=1;
+								break;
+							}*/
+                            }
+                        
+                         for(i=0;i<spl.length;i++)
+                        {
+                            sb.append(spl[i]);
+                            sb.append("&");
+                            //out.println(spl[i]);
+                        }
+                    }
+                    }
+                    
+                    break;
+                }
+            }
+            c_value=sb.toString();
+                    c.setValue(c_value);
+		          response.addCookie(c);
+                    c_value=c.getValue();
+                        //out.println(c_value);
+                        
+        }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], select, textarea {
+    width: 60%;
+    padding: 12px;
+   // border: 1px solid #ccc;//
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+    body{
+         background-image: url("1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: white;
+    }
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.container1 {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    top: 5%;
+    //color: black;
+.container {
+    border-radius: 5px;
+    
+    padding: 20px;
+}
+   .container #d1{
+        font-family: Trebuchet MS;
+   
+      //color: black;
+        top: 15%;
+        left: 40%;
+    position:relative;
+ 
+    transform: translate(-50%, -50%);
+}
+    #center-div
+{
+  position: absolute;
+    top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color:  rgba(0,0,0,0.4);
+  }
+</style>
+</head>
+<body>
+    <div id="center-div">
+<div class="container1">
+  <img src="egift-card.png"  style="width:50;">
+ 
+    <div id="d1"><b> GIFT VOUCHER</b></div>
+ </div>
+
+
+<div class="container">
+  <form action="action.jsp">
+  <center>
+    <input type="text" id="fname" name="firstname3" placeholder="Recipient's Name">
+
+    
+    <input type="text" id="lname" name="lastname" placeholder="Recipient's Email">
+    <input type="text" id="fname" name="firstname1" placeholder="Recipient's mobile number">
+    <input type="text" id="fname" name="firstname2" placeholder="Your name">
+  <input type="text" id="fname" name="firstname4" placeholder="Mobile number"> <br>
+    <label for="country"></label>
+    <select id="cost" >
+      <option value="inr1">INR 500</option>
+      <option value="inr2">INR 1000</option>
+      <option value="inr3">INR 1500</option>
+    </select>
+
+    <textarea id="subject" name="subject" placeholder="Leave your message" style="height:180px"></textarea>
+      <br>
+      <br>
+
+    <input type="submit" value="Confirm and pay">
+      </center>
+  </form>
+</div>
+</div>
+</body>
+</html>

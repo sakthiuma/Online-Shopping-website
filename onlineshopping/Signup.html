@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online shopping - login</title>
+
+
+    <style>
+        .center-div #name{
+  outline: none;
+  width: 23%;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: transparent;
+  border-top: solid transparent;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: 2px  solid white;
+}
+        .center-div #pass {
+  outline: none;
+  width: 23%;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: transparent;
+  border-top: solid transparent;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: 2px  solid white;
+}
+ .center-div #pass1 {
+  outline: none;
+  width: 23%;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: transparent;
+  border-top: solid transparent;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: 2px  solid white;
+}
+.center-div a{
+  margin-right:220px;
+  color: white;
+}
+
+.butn {
+  box-shadow: none !important;
+  border:2px solid white;
+  width: 120px;
+  height: 50px;
+ font-family:palatino;
+  font-size: 20px;
+  background-color:transparent;
+  border-radius: 25px;
+  outline: 0;
+  color:gold;
+
+
+
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+}
+
+.butn:hover{
+
+  width: 170px;
+  height: 60px;
+  border-radius: 45px;
+  font-size: 30px;
+  background-color:  transparent;
+}
+
+        .center-div
+        {
+              position: absolute;
+                top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              width:100%;
+              height:100%;
+              background-color:  rgba(0,0,0,0.4);
+        }
+        body{
+background-image:url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+font-family:Trebuchet MS; 
+        font-size: 20px;
+  color:white;
+}
+        #d2{
+            position:absolute;
+            top:10%;
+            right:0;
+        }
+        
+    </style>
+</head>
+<body >
+    
+<div class="center-div">
+<h3 id="signin" style="color:#ffffff;font-size:40px;margin-left:530px;font-family:palatino;">SIGN UP</h3>
+<center>
+<form  action="RegisterController" method="post">
+  <br>
+  <br>
+  <label style="text-align:left; margin-right:275px; color:gold;font-size:30px ;font-family:palatino;">Name</label>
+  <br>
+  <input name="name" type="text" required>
+  <br>
+  <br>	
+  <br>
+  <label style="text-align:left; margin-right:220px; color:gold; font-size:30px;font-family:palatino;">Password</label>
+  <br>
+  <input name="pass" type="password">
+  <br>
+  <br>
+  <label style="text-align:left; margin-right:220px; color:gold; font-size:30px;font-family:palatino;"> Retype Password</label>
+  <br>
+  <input name="pass1" type="password">
+  <br>
+  <br>
+  <br>
+  <br>
+  <input type="submit" id="button"  class="butn" value="Sign Up" />
+</form>
+</center>
+   <div id="d2">Already  an existing user???<br><br>
+    <a href="login.html"><button class="butn"> Log in</button></a></div>
+</div>
+        </form>
+</body>
+</html>
