@@ -14,3 +14,6 @@
 
 # Screenshot of the Main page
 ![shopping_front](https://user-images.githubusercontent.com/25689783/41513818-46a259d8-72bf-11e8-8eac-257c38648603.PNG)
+
+# Screenshot of the User Page
+![shopping_veg](https://user-images.githubusercontent.com/25689783/41513850-a1852d26-72bf-11e8-9b52-ad4c3b997138.PNG)
