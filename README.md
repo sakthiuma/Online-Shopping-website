@@ -11,3 +11,6 @@
   Any webserver to run the website.
   Java environment(both jdk,jre to be installed)
   MySql database and its jar file
+
+# Screenshot of the Main page
+![shopping_front](https://user-images.githubusercontent.com/25689783/41513818-46a259d8-72bf-11e8-8eac-257c38648603.PNG)
